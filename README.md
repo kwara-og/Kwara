@@ -11,29 +11,58 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Kwara API Helper is a Flutter package designed to make working with APIs easy and efficient. It simplifies the process of fetching JSON data from APIs and parsing it into Dart objects, reducing the amount of boilerplate code and improving maintainability. With built-in error handling and customizable parsing, this package streamlines API integration in Flutter apps.
 
-## Features
+Features
+-Easily fetch and parse JSON data into Dart models.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+-Simplified API error handling.
 
-## Getting started
+-Customizable model parsing with the fromJson function.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+-Flexible and easy to use in any Flutter project.
 
-## Usage
+Getting started
+To get started with Kwara API Helper, you need to add it to your pubspec.yaml:
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+yaml
+Copy
+Edit
+dependencies:
+  kwara_api_helper:
+    git:
+      url: https://github.com/kwara-og/Kwara
+Ensure you have the required dependencies, like http for making HTTP requests.
 
-```dart
-const like = 'sample';
-```
+Usage
+Here’s an example of how to use Kwara API Helper to fetch and parse data:
 
-## Additional information
+dart
+Copy
+Edit
+import 'package:kwara_api_helper/kwara.dart';
+import 'morty.dart'; // Custom model
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+void main() async {
+  const url = 'https://rickandmortyapi.com/api/character';
+
+  try {
+    final morty = await Kwara<Morty>(
+      url,
+      fromJson: (json) => Morty.fromJson(json),
+    );
+
+    print('Total Characters: ${morty.info.count}');
+    print('First Character: ${morty.results.first.name}');
+  } catch (e) {
+    print('Error: $e');
+  }
+}
+Additional information
+For more details, visit the GitHub repository.
+
+To contribute to this package, please fork the repo, create a pull request, and submit your changes.
+
+If you encounter issues, please file them under the Issues tab.
+
+You can also check the example folder for more detailed use cases.
