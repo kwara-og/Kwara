@@ -22,7 +22,7 @@ Kwara is a Flutter package designed to simplify working with APIs. It streamline
 - **Customizable model parsing** using the `fromJson` function.
 - **Flexible and easy to integrate** into any Flutter project.
 
-## Getting started
+## Getting Started
 
 To get started with Kwara, add it to your `pubspec.yaml` file:
 
@@ -33,7 +33,7 @@ dependencies:
       url: https://github.com/kwara-og/Kwara
 Ensure that you also have required dependencies like http for making HTTP requests.
 
-## **Usage**
+Usage
 Here’s a simple example of how to use the Kwara API Helper to fetch and parse data from an API:
 
 dart
@@ -59,7 +59,7 @@ void main() async {
 }
 For more detailed use cases, check the /example folder.
 
-## **Additional Information**
+Additional Information
 For more details, visit the GitHub repository.
 
 To contribute, please fork the repo, create a pull request, and submit your changes.
@@ -68,9 +68,11 @@ If you encounter any issues, please file them under the Issues tab in the GitHub
 
 You can also explore the example folder for more advanced use cases and samples.
 
-### How to Use in VS Code:
+How to Use in VS Code:
+Open your project in VS Code.
 
-1. Open your project in VS Code.
-2. Locate your `README.md` file and open it.
-3. Paste the above content into the file.
-4. Save the file (`Ctrl + S` or `Cmd + S`).
+Locate your README.md file and open it.
+
+Paste the above content into the file.
+
+Save the file (Ctrl + S or Cmd + S).
