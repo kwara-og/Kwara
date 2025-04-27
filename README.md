@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-# Kwara API Helper
+# Kwara
 
 Kwara is a Flutter package designed to simplify working with APIs. It streamlines the process of fetching JSON data from APIs and parsing it into Dart objects. This reduces boilerplate code and enhances maintainability, making it easier and more efficient to integrate APIs into your Flutter applications. With built-in error handling and customizable parsing, Kwara provides a smoother experience for Flutter developers.
 
@@ -33,7 +33,7 @@ dependencies:
       url: https://github.com/kwara-og/Kwara
 Ensure that you also have required dependencies like http for making HTTP requests.
 
-Usage
+## **Usage**
 Here’s a simple example of how to use the Kwara API Helper to fetch and parse data from an API:
 
 dart
@@ -59,7 +59,7 @@ void main() async {
 }
 For more detailed use cases, check the /example folder.
 
-Additional Information
+## **Additional Information**
 For more details, visit the GitHub repository.
 
 To contribute, please fork the repo, create a pull request, and submit your changes.
