@@ -11,29 +11,68 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Kwara
+
+Kwara is a Flutter package designed to simplify working with APIs. It streamlines the process of fetching JSON data from APIs and parsing it into Dart objects. This reduces boilerplate code and enhances maintainability, making it easier and more efficient to integrate APIs into your Flutter applications. With built-in error handling and customizable parsing, Kwara provides a smoother experience for Flutter developers.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Easily fetch and parse JSON data** into Dart models.
+- **Simplified API error handling** for more robust requests.
+- **Customizable model parsing** using the `fromJson` function.
+- **Flexible and easy to integrate** into any Flutter project.
 
-## Getting started
+## Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To get started with Kwara, add it to your `pubspec.yaml` file:
 
-## Usage
+```yaml
+dependencies:
+  kwara:
+    git:
+      url: https://github.com/kwara-og/Kwara
+Ensure that you also have required dependencies like http for making HTTP requests.
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Usage
+Here’s a simple example of how to use the Kwara API Helper to fetch and parse data from an API:
 
-```dart
-const like = 'sample';
-```
+dart
+Copy
+Edit
+import 'package:kwara/kwara.dart';
+import 'morty.dart'; // Custom model
 
-## Additional information
+void main() async {
+  const url = 'https://rickandmortyapi.com/api/character';
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+  try {
+    final morty = await Kwara<Morty>(
+      url,
+      fromJson: (json) => Morty.fromJson(json),
+    );
+
+    print('Total Characters: ${morty.info.count}');
+    print('First Character: ${morty.results.first.name}');
+  } catch (e) {
+    print('Error: $e');
+  }
+}
+For more detailed use cases, check the /example folder.
+
+Additional Information
+For more details, visit the GitHub repository.
+
+To contribute, please fork the repo, create a pull request, and submit your changes.
+
+If you encounter any issues, please file them under the Issues tab in the GitHub repository.
+
+You can also explore the example folder for more advanced use cases and samples.
+
+How to Use in VS Code:
+Open your project in VS Code.
+
+Locate your README.md file and open it.
+
+Paste the above content into the file.
+
+Save the file (Ctrl + S or Cmd + S).
